@@ -37,5 +37,3 @@ end
       @status = "reversed"
     end
   end
-
-
