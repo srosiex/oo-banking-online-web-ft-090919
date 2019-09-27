@@ -38,6 +38,7 @@ def execute_transaction
       # reject_transfer
       if !valid? && sender.balance < amount && self.status == "closed"
         self.status = "rejected"
+        puts "Transaction rejected. Please check your account balance."
     end
   end
   end
