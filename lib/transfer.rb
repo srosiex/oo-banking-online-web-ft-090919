@@ -35,7 +35,8 @@ def execute_transaction
       receiver.balance += amount
       self.status = "complete"
     else
-      reject_transfer
+      # reject_transfer
+      if !valid? && sender.balance < amount && self.status == "closed"
     end
   end
 
