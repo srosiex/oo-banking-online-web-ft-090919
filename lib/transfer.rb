@@ -38,7 +38,6 @@ def execute_transaction
       reject_transfer
     end
   end
-end
 
   # def reverse_transfer
   #   if @status == "complete"
