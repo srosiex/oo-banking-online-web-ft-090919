@@ -35,11 +35,8 @@ def execute_transaction
       receiver.balance += amount
       self.status = "complete"
     else
-      # reject_transfer
-      if !valid? && sender.balance < amount && self.status == "closed"
-        self.status = "rejected"
-        puts "Transaction rejected. Please check your account balance."
-    end
+      reject_transfer
+      
   end
   end
 
@@ -49,4 +46,9 @@ def execute_transaction
   #     @receiver.deposit( @amount * -1)
   #     @status = "reversed"
   #   end
+
+  def reject_transfer
+    self.status = "rejected"
+    "Transaction rejected. Please check your account balance."
+  end
   end
