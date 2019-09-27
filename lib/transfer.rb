@@ -20,7 +20,9 @@ class Transfer
         elsif
           @status == "complete"
     else
-  if @sender.valid? and @receiver.valid?
+  @sender = BankAccount.name 
+  @receiver = BankAccount.name
+
       @sender.deposit(@amount * -1)
       # @sender.balance = (@sender.balance - @sender.amount)
       @receiver.deposit(@amount)
