@@ -40,6 +40,7 @@ def execute_transaction
         self.status = "rejected"
     end
   end
+  end
 
   # def reverse_transfer
   #   if @status == "complete"
