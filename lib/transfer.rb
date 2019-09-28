@@ -43,6 +43,7 @@ def execute_transaction
   def reverse_transfer
     sender.balance += amount
     receiver.balance -= amount
+    self.status = "reversed"
     end
 
   def reject_transfer
