@@ -41,10 +41,12 @@ def execute_transaction
   end
 
   def reverse_transfer
+    if self.status = "complete"
     sender.balance += amount
     receiver.balance -= amount
     self.status = "reversed"
     end
+  end
 
   def reject_transfer
     self.status = "rejected"
